@@ -76,10 +76,14 @@ Phone audio hardware introduces speaker latency, microphone latency, echo cancel
 
 Signal quality comes before new features: per-device latency calibration, stronger direct-path rejection, multi-peak analysis, confidence validation, phone-model testing, handling Android acoustic echo cancellation, and user testing with blind/low-vision accessibility specialists.
 
+## Documentation
+
+See the [documentation index](docs/README.md) for project governance, brand policy, support information, and standalone-operation notes.
+
 ## Ownership and license
 
 Copyright © 2026 Groundstate Technology LLC. EchoWalk is released under the Apache License 2.0 so people can use, study, modify, and redistribute it while retaining clear project ownership and attribution. See `LICENSE` and `NOTICE`.
 
 ## Standalone-first deployment
 
-This project does not require Groundstate Admin Center or a Groundstate account. Core operation remains local and independently deployable. See [docs/STANDALONE_OPERATION.md](docs/STANDALONE_OPERATION.md) for the product-specific identity and outage boundary.
+This project does not require Groundstate Admin Center or a Groundstate account. Core operation remains local and independently deployable. See [Standalone operation](docs/governance/STANDALONE_OPERATION.md) for the product-specific identity and outage boundary.
