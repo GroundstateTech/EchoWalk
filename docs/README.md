@@ -7,7 +7,7 @@ Detailed project documentation is organized by purpose so the repository root st
 
 ## Governance
 - [Brand policy](governance/BRAND_POLICY.md)
-- [Project governance](governance/GOVERNANCE.md)
+- [Governance](governance/GOVERNANCE.md)
 - [Standalone operation](governance/STANDALONE_OPERATION.md)
 
 Root `README.md`, `LICENSE`, `NOTICE`, `SECURITY.md`, and `CONTRIBUTING.md` remain at the repository root intentionally.
