@@ -1,9 +1,5 @@
 apply plugin: 'com.android.library'
-apply plugin: 'org.jetbrains.kotlin.android'
-
-apply from: project(":expo-modules-core").projectDir.absolutePath + "/ExpoModulesCorePlugin.gradle"
-applyKotlinExpoModulesCorePlugin()
-useExpoPublishing()
+apply plugin: 'expo-module-gradle-plugin'
 
 android {
   namespace "expo.modules.echowalksonar"
