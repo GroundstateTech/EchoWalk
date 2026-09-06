@@ -80,6 +80,10 @@ Signal quality comes before new features: per-device latency calibration, strong
 
 Copyright © 2026 Groundstate Technology LLC. EchoWalk is released under the Apache License 2.0 so people can use, study, modify, and redistribute it while retaining clear project ownership and attribution. See `LICENSE` and `NOTICE`.
 
+## Documentation
+
+See the [documentation index](docs/README.md).
+
 ## Standalone-first deployment
 
-This project does not require Groundstate Admin Center or a Groundstate account. Core operation remains local and independently deployable. See [docs/STANDALONE_OPERATION.md](docs/STANDALONE_OPERATION.md) for the product-specific identity and outage boundary.
+This project does not require Groundstate Admin Center or a Groundstate account. Core operation remains local and independently deployable. See [Standalone operation](docs/governance/STANDALONE_OPERATION.md) for the product-specific identity and outage boundary.
