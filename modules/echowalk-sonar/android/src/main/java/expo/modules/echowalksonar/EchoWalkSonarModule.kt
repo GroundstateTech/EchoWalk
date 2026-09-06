@@ -8,7 +8,6 @@ import android.media.AudioManager
 import android.media.AudioRecord
 import android.media.AudioTrack
 import android.media.MediaRecorder
-import androidx.core.content.ContextCompat
 import expo.modules.kotlin.modules.Module
 import expo.modules.kotlin.modules.ModuleDefinition
 import kotlin.math.PI
@@ -25,8 +24,7 @@ class EchoWalkSonarModule : Module() {
       val context = appContext.reactContext
         ?: return@AsyncFunction reading(null, 0.0, 0.0, SAMPLE_RATE)
 
-      val hasMic = ContextCompat.checkSelfPermission(
-        context,
+      val hasMic = context.checkSelfPermission(
         Manifest.permission.RECORD_AUDIO
       ) == PackageManager.PERMISSION_GRANTED
 
