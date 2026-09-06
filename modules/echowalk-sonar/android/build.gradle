@@ -1,11 +1,15 @@
-apply plugin: 'com.android.library'
-apply plugin: 'expo-module-gradle-plugin'
+plugins {
+  id 'com.android.library'
+  id 'expo-module-gradle-plugin'
+}
+
+group = 'expo.modules.echowalksonar'
+version = '1.0.0'
 
 android {
   namespace "expo.modules.echowalksonar"
-  compileSdkVersion safeExtGet("compileSdkVersion", 36)
   defaultConfig {
-    minSdkVersion safeExtGet("minSdkVersion", 24)
-    targetSdkVersion safeExtGet("targetSdkVersion", 36)
+    versionCode 1
+    versionName "1.0.0"
   }
 }
