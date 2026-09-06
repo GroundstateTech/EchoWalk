@@ -1,5 +1,7 @@
 # EchoWalk Documentation
 
+Detailed project documentation is organized by purpose so the repository root stays focused on running and contributing to EchoWalk.
+
 ## Getting started
 - [Support](getting-started/SUPPORT.md)
 
