@@ -1,5 +1,6 @@
 import * as React from "react";
 import {
+  AppState,
   PermissionsAndroid,
   Platform,
   Pressable,
@@ -35,6 +36,7 @@ export default function App() {
 
   const busyRef = React.useRef(false);
   const lastHapticRef = React.useRef(0);
+  const resumeAfterBackgroundRef = React.useRef(false);
 
   const requestPermissions = React.useCallback(async () => {
     try {
@@ -80,6 +82,26 @@ export default function App() {
   React.useEffect(() => {
     void requestPermissions();
   }, [requestPermissions]);
+
+  React.useEffect(() => {
+    const subscription = AppState.addEventListener("change", (state) => {
+      if (state === "active") {
+        if (resumeAfterBackgroundRef.current && microphoneAllowed && EchoWalkSonar) {
+          resumeAfterBackgroundRef.current = false;
+          setRunning(true);
+          setMessage("Sonar active");
+        }
+        return;
+      }
+      setRunning((wasRunning) => {
+        resumeAfterBackgroundRef.current = wasRunning;
+        return false;
+      });
+      busyRef.current = false;
+      setMessage("Sonar paused while EchoWalk is in the background");
+    });
+    return () => subscription.remove();
+  }, [microphoneAllowed]);
 
   const triggerHaptic = React.useCallback(
     (style: "light" | "medium" | "heavy", minimumGapMs: number) => {
