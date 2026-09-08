@@ -22,5 +22,4 @@ jobs:
         shell: bash
         run: |
           npm ci
-          npm test
-          npm run doctor
+          npm run check
